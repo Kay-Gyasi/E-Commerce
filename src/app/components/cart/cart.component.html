@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Unit price (GHS)</th>
+      <th>Quantity</th>
+      <th>Cum. Price (GHS)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of cart">
+      <td>{{ x.title }}</td>
+      <td>{{ x.price }}</td>
+      <td><input type="number" #quantity="ngModel" [ngModel]="quantityNum" name="quantity"></td>
+      <td>{{ x.price * quantity.value }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total Amt. (GHS): {{ total }}</td>
+      <td><button class="btn btn-primary" style="float: right" (click)="pay()">Make Payment</button></td>
+    </tr>
+  </tfoot>
+</table>

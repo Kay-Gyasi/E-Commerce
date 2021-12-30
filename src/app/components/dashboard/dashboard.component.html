@@ -1,0 +1,5 @@
+<div class="row" style="margin-left: 6vw; margin-right: 6vw;">
+  <div class="shadow-lg col-sm-4 p-3" *ngFor="let x of properties$ | async">
+    <app-item-card [property]="x"></app-item-card>
+  </div>
+</div>
