@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-img-wrapper">
-    <img *ngIf="isShoe()" class="card-img-top" src="assets/images/sneaker-1.jfif" style="width: 23.9vw">
-    <img *ngIf="!isShoe()" class="card-img-top" src="assets/images/sandal-3.jfif" style="width: 23.9vw">
+    <img *ngIf="isShoe()" class="card-img-top pic" src="assets/images/sneaker-1.jfif">
+    <img *ngIf="!isShoe()" class="card-img-top pic" src="assets/images/sandal-3.jfif">
     <ul class="list-inline text-center member-icons animate">
       <li class="list-inline-item">
         <button routerLink="/item-detail/{{property.productID}}" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">

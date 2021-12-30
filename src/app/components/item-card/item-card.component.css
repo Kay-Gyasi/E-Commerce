@@ -36,3 +36,13 @@
 .animate{
   transition: all 0.3s ease-in-out
 }
+
+.pic{
+  width: 23.9vw
+}
+
+@media only screen and (max-width: 600px) {
+  .pic{
+    width: 80vw;
+  }
+}
