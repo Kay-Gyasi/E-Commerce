@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
     this.storage.addUser(this.registerInfo).subscribe({
     next: data => {console.log(data), this.alertify.success("Registration successful");
     },
-      error: error => {console.log(error.StatusText), this.alertify.success("You are registered. Log in")}
+      error: error => {console.log(error.StatusText), this.alertify.success("You are already registered. Log in")}
   });
     form.reset();
 
