@@ -9,7 +9,7 @@ export class LocalStorageService {
 
   constructor(private http:HttpClient) { }
 
-  private readonly apiurl = "https://localhost:7164/api/"
+  private readonly apiurl = "http://ecommerceapikaygyasi.azurewebsites.net/api/"
 
   addUser(user: Register){
     /* let users = [];

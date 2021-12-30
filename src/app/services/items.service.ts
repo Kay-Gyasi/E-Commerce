@@ -10,7 +10,7 @@ export class ItemsService {
 
 constructor(private http:HttpClient) { }
 
-private readonly apiurl = "https://localhost:7164/api/"
+private readonly apiurl = "http://ecommerceapikaygyasi.azurewebsites.net/api/";
 
 getItems():Observable<Item[]>{
   /* return this.http.get<Item[]>('app/data/items.json').pipe(

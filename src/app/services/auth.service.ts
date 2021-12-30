@@ -8,7 +8,7 @@ import { LoginReq } from '../models/loginReq';
 })
 export class AuthService {
 
-  private readonly apiurl = "https://localhost:7164/api/"
+  private readonly apiurl = "http://ecommerceapikaygyasi.azurewebsites.net/api/"
 
   constructor(private http:HttpClient) { }
 
