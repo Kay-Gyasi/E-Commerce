@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Register } from 'src/app/models/register';
 import { LocalStorageService } from 'src/app/services/localStorage.service';
 import { AlertifyService } from 'src/app/services/alertify.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -20,7 +21,8 @@ export class RegisterComponent implements OnInit {
     Address:""
   };
 
-  constructor(private storage:LocalStorageService, private alertify:AlertifyService) { }
+  constructor(private storage:LocalStorageService, private alertify:AlertifyService,
+    private router:Router) { }
 
   ngOnInit() {
   }
@@ -33,5 +35,7 @@ export class RegisterComponent implements OnInit {
       error: error => console.log(error.StatusText)
     });
     form.reset();
+
+    this.router.navigate(['/login']);
   }
 }
