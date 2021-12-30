@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
 
   quantityNum = 1;
 
-  total:number = 1;
+  total:number = 0;
 
   ngOnInit() {
     this.cart = JSON.parse(localStorage.getItem('Cart') || '{}');
@@ -24,9 +24,5 @@ export class CartComponent implements OnInit {
     for(const id in this.cart){
       this.total += (this.cart[id].price * this.quantityNum);
     }
-  }
-
-  pay(){
-    this.router.navigate(['/pay']);
   }
 }

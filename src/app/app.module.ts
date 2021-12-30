@@ -23,7 +23,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductEffects } from './state/effects/dashboard.effects';
-import { FlutterwaveModule } from 'flutterwave-angular-v3';
 
 @NgModule({
   declarations: [
@@ -44,8 +43,7 @@ import { FlutterwaveModule } from 'flutterwave-angular-v3';
     HttpClientModule,
     EffectsModule.forRoot([ProductEffects]),
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
-    FlutterwaveModule
+    StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production})
   ],
   providers: [LocalStorageService, AlertifyService, AuthService, ItemsService],
   bootstrap: [AppComponent]
